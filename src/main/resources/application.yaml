@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: iti0302-project
+  datasource:
+    username: postgres
+    password: docker
+    url: jdbc:postgresql://${POSTGRES_DB:localhost}:5432/postgres
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    change-log: db/changelog/changelog-master.xml
+    # FOR DEV PURPOSES ONLY
+#    drop-first: true
+  jpa:
+    hibernate:
+      ddl-auto: none
+server:
+  port: 8081
