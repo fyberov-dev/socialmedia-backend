@@ -47,7 +47,7 @@ Frontend:
 Clone the project to the localhost
 
 ```shell
-git clone git@gitlab.cs.taltech.ee:elprii/iti0302-2024-project.git
+git clone git@github.com:fyberov-dev/socialmedia-backend.git
 ```
 
 ### Startup using .jar file
@@ -67,34 +67,6 @@ java -jar ./build/libs/iti0302-project-[VERSION].jar
 *change the '[VERSION]' to the current version of the application
 
 ### Startup using Docker
-
-Find the application.example.yaml file. Delete '.example' from the file name and fill the data:
-
-```yaml
-spring:
-  application:
-    name: iti0302-project
-  datasource:
-    username:
-    password:
-    url:
-    driver-class-name: org.postgresql.Driver
-  liquibase:
-    change-log: db/changelog/changelog-master.xml
-    # FOR DEV PURPOSES ONLY
-    drop-first: true
-  jpa:
-    hibernate:
-      ddl-auto: none
-server:
-  port: 8080
-```
-
-Add new external network to the docker
-
-```shell
-docker network create backend
-```
 
 Write down next command to launch the project:
 
